@@ -1,0 +1,8 @@
+# Keys and local state — never commit
+.keys/
+tools/
+node_modules/
+agent/audit-log.jsonl
+contract/target/
+docs/
+*.log

@@ -1,0 +1,24 @@
+[package]
+name = "spendguard"
+version = "0.1.0"
+edition = "2021"
+description = "SpendGuard: an on-chain policy firewall for AI agent spending on NEAR"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "=5.7.0"
+borsh = { version = "1.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+panic = "abort"
+opt-level = "z"
+overflow-checks = true
+
+[workspace]
